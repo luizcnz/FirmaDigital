@@ -12,7 +12,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Image x:Name="foto" Source="imagen.png" WidthRequest="200" IsVisible="true"/>
+                <Image x:Name="foto" Source="imagen.png" WidthRequest="200" IsVisible="false"/>
 
                 <controls:SignaturePadView
                     VerticalOptions="FillAndExpand"
@@ -20,7 +20,7 @@
 	                StrokeWidth="3"
 	                StrokeColor="Black"
 	                BackgroundColor="White" 
-                    IsVisible="false"/>
+                    IsVisible="true"/>
 
                 <Entry x:Name="foto_nombre" 
                        BackgroundColor="#FDFDFD"
@@ -36,13 +36,15 @@
                        Margin="20,10,20,0" 
                        TextColor="Black"
                        FontSize="20" 
-                       FontFamily="NewYork"/>
+                       FontFamily="NewYork"
+                       IsVisible="true"/>
 
 
                 <StackLayout Padding="0,0" Margin="5">
 
                     <Grid>
-                        <Button x:Name="toma" 
+                        
+                        <!--<Button x:Name="toma" 
                                 Grid.Row="0" Grid.Column="0"
                                 Clicked="toma_Clicked" 
                                 Text="Tomar Foto" 
@@ -50,11 +52,11 @@
                                 Margin="20,10,20,0" 
                                TextColor="Black"
                                FontSize="20" 
-                               FontFamily="AppleNegrita" HeightRequest="60" WidthRequest="200"/>
+                               FontFamily="AppleNegrita" HeightRequest="60" WidthRequest="200"/>-->
 
                         <Button x:Name="BtnGuardar" 
                                 Grid.Row="1" Grid.Column="0"
-                                IsVisible="false" 
+                                IsVisible="true" 
                                 Clicked="BtnGuardar_Clicked" 
                                 Text="Guardar" 
                                 HorizontalOptions="CenterAndExpand"

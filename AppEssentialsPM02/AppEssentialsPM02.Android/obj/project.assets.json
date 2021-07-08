@@ -2958,11 +2958,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BLK\\source\\aparte\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02.Android\\AppEssentialsPM02.Android.csproj",
+      "projectUniqueName": "C:\\Users\\BLK\\source\\aparte\\Firma Digital\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02.Android\\AppEssentialsPM02.Android.csproj",
       "projectName": "AppEssentialsPM02.Android",
-      "projectPath": "C:\\Users\\BLK\\source\\aparte\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02.Android\\AppEssentialsPM02.Android.csproj",
+      "projectPath": "C:\\Users\\BLK\\source\\aparte\\Firma Digital\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02.Android\\AppEssentialsPM02.Android.csproj",
       "packagesPath": "C:\\Users\\BLK\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BLK\\source\\aparte\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02.Android\\obj\\",
+      "outputPath": "C:\\Users\\BLK\\source\\aparte\\Firma Digital\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2983,8 +2983,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "C:\\Users\\BLK\\source\\aparte\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02\\AppEssentialsPM02.csproj": {
-              "projectPath": "C:\\Users\\BLK\\source\\aparte\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02\\AppEssentialsPM02.csproj"
+            "C:\\Users\\BLK\\source\\aparte\\Firma Digital\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02\\AppEssentialsPM02.csproj": {
+              "projectPath": "C:\\Users\\BLK\\source\\aparte\\Firma Digital\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02\\AppEssentialsPM02.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eHa3t00hXnmOY+7wWI+JrsO0RuvSSroPhln4axX6eNiRcAY8rpndvuRe9h0gGvtcjNa2ylULDkY2Pq5JVk4C5g==",
+  "dgSpecHash": "fDK165NpyMlx0VcT8YPd8YCDIIGx8C28aEjd0ZEX0YJWPEuM+vFpZYr4UNXt6qAYepHreg2cPNslEs4Hs4rFXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\BLK\\source\\aparte\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02\\AppEssentialsPM02.csproj",
+  "projectFilePath": "C:\\Users\\BLK\\source\\aparte\\Firma Digital\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02\\AppEssentialsPM02.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BLK\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\BLK\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

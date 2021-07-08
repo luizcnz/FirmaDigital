@@ -11,6 +11,7 @@ using Xamarin.Essentials;
 using SQLite;
 using System.IO;
 using Plugin.Media.Abstractions;
+using SignaturePad.Forms;
 
 namespace AppEssentialsPM02
 {
@@ -35,7 +36,7 @@ namespace AppEssentialsPM02
         }
 
 
-
+        /*
         private async void toma_Clicked(object sender, EventArgs e)
         {
 
@@ -48,28 +49,39 @@ namespace AppEssentialsPM02
                 //variable utilizada para almacenar la foto tomada en formado 
                 arrayImagen = null;
                 BtnGuardar.IsVisible = true;
-                    MemoryStream memoryStream = new MemoryStream();// creamos un flujo de memoria temporal
-                        
-                    fotoTomada.GetStream().CopyTo(memoryStream); 
-                    arrayImagen = memoryStream.ToArray();
+
+                MemoryStream memoryStream = new MemoryStream();// creamos un flujo de memoria temporal
+                fotoTomada.GetStream().CopyTo(memoryStream); 
+                arrayImagen = memoryStream.ToArray();
                            
                 // se muestra la imagen pero aun no se guarda
                 this.foto.Source = ImageSource.FromStream(() => { return fotoTomada.GetStream(); });
             }
+            
 
-
-        }
+        }*/
 
         private async void BtnGuardar_Clicked(object sender, EventArgs e)
         {
+
+            Stream bitmap = await signatureView.GetImageStreamAsync(SignatureImageFormat.Png);
+            var signatureMemoryStream = bitmap as MemoryStream;
+
+            byte[] datos = signatureMemoryStream.ToArray();
+
+            //byte[] datos = null;
+
             //condicional para asegurarse de que se ingreso un nombre y una descripcion
             if (!string.IsNullOrEmpty(foto_nombre.Text))
             {
+
+                
+
                 Picture photoToSave = new Picture {
                     Name = foto_nombre.Text,
                     Desc = foto_desc.Text,
-                    Imagen = arrayImagen
-                     }; 
+                    Imagen = datos
+                }; 
 
                 try
                 {

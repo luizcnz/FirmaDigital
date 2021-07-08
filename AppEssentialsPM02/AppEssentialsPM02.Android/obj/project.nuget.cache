@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f2btLoBOWsdMHJxuSp+yVqVhgmXKxMmPOy5xmjVkiNTTTJLySPCuUWRDNys3ryFn1YlnDveQMUWZuaB1lzT3eQ==",
+  "dgSpecHash": "rbveFg0MjyZA9gvFY82CpfpU+mwFnoMRRtvmHJDUxZlT7kn4e5c/lVP9lO1qLofEfPrwmB9OFT3gsIuo1Uk+zw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\BLK\\source\\aparte\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02.Android\\AppEssentialsPM02.Android.csproj",
+  "projectFilePath": "C:\\Users\\BLK\\source\\aparte\\Firma Digital\\FotosConSQLite\\AppEssentialsPM02\\AppEssentialsPM02.Android\\AppEssentialsPM02.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BLK\\.nuget\\packages\\plugin.currentactivity\\2.1.0.2\\plugin.currentactivity.2.1.0.2.nupkg.sha512",
     "C:\\Users\\BLK\\.nuget\\packages\\plugin.permissions\\3.0.0.12\\plugin.permissions.3.0.0.12.nupkg.sha512",
