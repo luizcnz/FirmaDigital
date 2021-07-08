@@ -21,18 +21,9 @@ namespace AppEssentialsPM02
         //Varibles para capturar el nombre y la descripcion
         public string nombre, descripcion;
 
-        //Variables globales de estado
-        private bool wasPhotoTaked;//sirve para validar si se tomo una foto
-
-        
-        //Se crea de manera global de manera que permite acceder a el despues de haber tomado la foto
-        byte[] arrayImagen = null;
-
-
         public FotoPage()
         {
             InitializeComponent();
-            wasPhotoTaked = false;
         }
 
 
@@ -65,48 +56,56 @@ namespace AppEssentialsPM02
         {
 
             Stream bitmap = await signatureView.GetImageStreamAsync(SignatureImageFormat.Png);
-            var signatureMemoryStream = bitmap as MemoryStream;
 
-            byte[] datos = signatureMemoryStream.ToArray();
-
-            //byte[] datos = null;
-
-            //condicional para asegurarse de que se ingreso un nombre y una descripcion
-            if (!string.IsNullOrEmpty(foto_nombre.Text))
+            if (bitmap != null)
             {
+                var signatureMemoryStream = bitmap as MemoryStream;
 
-                
+                byte[] datos = signatureMemoryStream.ToArray();
 
-                Picture photoToSave = new Picture {
-                    Name = foto_nombre.Text,
-                    Desc = foto_desc.Text,
-                    Imagen = datos
-                }; 
+                //byte[] datos = null;
 
-                try
+                //condicional para asegurarse de que se ingreso un nombre y una descripcion
+                if (!string.IsNullOrEmpty(foto_nombre.Text))
                 {
-                    int res = await App.InstanciaBD.InsertPicture(photoToSave);
-                    if (res > 0)
+
+
+
+                    Picture photoToSave = new Picture
                     {
-                      await  DisplayAlert("Guardado Exitosamente", "Imagen guardada exitosamente", "Ok");
+                        Name = foto_nombre.Text,
+                        Desc = foto_desc.Text,
+                        Imagen = datos
+                    };
 
-                        //Reseteamos a los valores iniciales 
-                        BtnGuardar.IsVisible = false;
-                        photoToSave = null;
-                        foto.Source = ImageSource.FromFile("imagen.png");
-                        foto_desc.Text = "";
-                        foto_nombre.Text = "";
+                    try
+                    {
+                        int res = await App.InstanciaBD.InsertPicture(photoToSave);
+                        if (res > 0)
+                        {
+                            await DisplayAlert("Guardado Exitosamente", "Firma guardada exitosamente", "Ok");
+
+                            //Reseteamos a los valores iniciales 
+                            //BtnGuardar.IsVisible = false;
+                            photoToSave = null;
+                            foto.Source = ImageSource.FromFile("imagen.png");
+                            foto_desc.Text = "";
+                            foto_nombre.Text = "";
+                        }
                     }
+                    catch (Exception ex)
+                    {
+                        await DisplayAlert("Error", "Lo sentimos ocurrio un error" + ex.Message, "Ok");
+                    }
+
+
                 }
-                catch(Exception ex)
-                {
-                    await DisplayAlert("Error", "Lo sentimos ocurrio un error"+ex.Message, "Ok");
-                }
-              
-                
+                else
+                    await DisplayAlert("Campos vacios", "Debe asignar al menos un nombre a la foto", "Ok");
+
             }
-            else
-                await DisplayAlert("Campos vacios", "Debe asignar al menos un nombre a la foto", "Ok");
+            else if (bitmap == null)
+                await DisplayAlert("Campo vacio", "Debe ingresar una firma", "Ok");
         }
 
         private async void Ver_Lista_Clicked(object sender, EventArgs e)

@@ -101,3 +101,5 @@ Xamarin.GooglePlayServices.Base.dll
 Xamarin.GooglePlayServices.Basement.dll
 Xamarin.GooglePlayServices.Maps.dll
 Xamarin.GooglePlayServices.Tasks.dll
+SignaturePad.dll
+SignaturePad.Forms.dll

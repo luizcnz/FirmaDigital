@@ -18,14 +18,6 @@ namespace AppEssentialsPM02
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListaFotos : ContentPage
     {
-        private int ItemID;
-        private string ItemRoute;
-        private string ItemName;
-        private string ItemDesc;
-
-
-
-
         public ListaFotos()
         {
             InitializeComponent();
